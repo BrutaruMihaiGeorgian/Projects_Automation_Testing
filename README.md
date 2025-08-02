@@ -5,14 +5,14 @@ This project contains automated tests for a web application using Selenium WebDr
 
 ## Test Overview
 
-| Test Class           | Description                               |
-|----------------------|-------------------------------------------|
-| `LoginTest`          | Validates the login functionality         |
-| `AddToCartTest`      | Tests adding one product to the cart      |
-| `AddSixProductsTest` | Tests adding six products to the cart     |
+| Test Class           | Description                           |
+|----------------------|---------------------------------------|
+| `LoginTest`          | Validates the login functionality     |
+| `AddToCartTest`      | Test adding one product to the cart   |
+| `AddSixProductsTest` | Test adding six products to the cart  |
 | `CheckoutTest`       | Full checkout flow including verification |
-| `LogoutTest`         | Tests the logout functionality            |
-| `RemoveProductTest`  | Tests remove product to the cart          |
+| `LogoutTest`         | Test the logout functionality         |
+| `RemoveProductTest`  | Test remove product to the cart       |
 ---
 
 ## Project Structure
