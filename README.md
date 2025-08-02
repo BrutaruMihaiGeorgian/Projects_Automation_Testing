@@ -37,6 +37,10 @@ This project contains automated tests for a web application using Selenium WebDr
       - verifying overview page
       - completing order and validating confirmation
   - **LogoutTest.java** — verifies that the user is successfully logged out and redirected appropriately   
+  - **RemoveFromCartTest.java** — tests removing products from the cart, including:
+    logging in
+
+
 ---
 
 ## Getting Started
