@@ -20,6 +20,10 @@ public class InventoryPage {
     // Selector for cart badge (shows number of items in cart)
     private By cartBadge = By.className("shopping_cart_badge");
 
+    // Selectors for menu and logout
+    private By menuButton = By.id("react-burger-menu-btn");
+    private By logoutLink = By.id("logout_sidebar_link");
+
     public InventoryPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -48,12 +52,12 @@ public class InventoryPage {
         driver.findElement(addRedTShirtButton).click();
     }
 
-    // Method to navigate to the cart page by clicking the cart icon
+    // Method to navigate to the cart page
     public void goToCart() {
         driver.findElement(cartIcon).click();
     }
 
-    // Returns the number shown in the cart badge (number of items in cart)
+    // Returns the number of items in the cart badge
     public String getCartBadgeCount() {
         if (driver.findElements(cartBadge).size() > 0) {
             return driver.findElement(cartBadge).getText();
@@ -61,4 +65,20 @@ public class InventoryPage {
             return "0";
         }
     }
+
+    // Opens menu and clicks logout
+    public void openMenuAndClickLogout() {
+        driver.findElement(menuButton).click();
+
+        // Simple wait for menu to appear (consider replacing with WebDriverWait)
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        driver.findElement(logoutLink).click();
+    }
 }
+
+
